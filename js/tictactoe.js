@@ -176,7 +176,7 @@ function drawWinLine (coordX1, coordY1, coordX2, coordY2) {
             // This method draws everything we laid out above
             c.stroke();
             // This condition checks if we've reached the endpoints
-            if (x <=x2 && y1 <= y2) {
+            if (x1 <=x2 && y1 <= y2) {
                 // This condition adds 10 to previous end x endpoint
                 if (x < x2) { x+=10;}
                 //This condition adds 10 to previous end y endpoint
