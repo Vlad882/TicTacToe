@@ -127,7 +127,7 @@ function disableClick() {
     // This makes our body unclicable
     body.style.pointerEvents = 'none';
     // this makes our body clicable again after 1 sec
-    setTimeout( function() {body.style.pointerEvents = 'auto'; }, 1000);
+    setTimeout(function () {body.style.pointerEvents = 'auto'; }, 1000);
 }
 
 // This function takes a string parameter of the path, have been setted earlier for
@@ -140,7 +140,7 @@ function audio(audioURL) {
 }
 
 // This function utilizes HTML canvas to draw win lines
-function drawLine (coordX1, coordY1, coordX2, coordY2) {
+function drawWinLine (coordX1, coordY1, coordX2, coordY2) {
     // This line accesses our HTML canvas element.
     const canvas = document.getElementById("win-lines");
     // This line gives us access to methods and properties to use on canvas
