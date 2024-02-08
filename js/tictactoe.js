@@ -14,10 +14,10 @@ function placeXOrO(squareNumber) {
         // This condition checks who's turn it is.
         if (activePlayer === "X") {
             // If activePlayer is equal to "X", the x.png is placed in HTML
-            select.style.backgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/x4.png")';
         } else {
             // If activePlayer is equal to "O", the o.png is placerd in HTML
-            select.style.backgroundImage = 'url("images/O.png")';
+            select.style.backgroundImage = 'url("images/O3.png")';
         }
         // squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -33,7 +33,7 @@ function placeXOrO(squareNumber) {
             activePlayer = "X"; 
         }
         //This function plays placement sound.
-        audio('./media/place.mp3');
+        audio('./media/place2.mp3');
         // This condition checks to see if it is the computers turn.
         if (activePlayer === "O") {
             // This function disables clicking for computer turn.
@@ -105,7 +105,7 @@ function checkWinConditions() {
     // 9 squares are selected the code executes
     else if (selectedSquares.length >= 9) {
         // This function plays the tie game sound.
-        audio('./media/tie.mp3');
+        audio('./media/tie2.mp3');
         // This function sets a .3 second timer before the resetGame is called
         setTimeout(function () {resetGame(); }, 500);
     }
@@ -205,7 +205,7 @@ function drawWinLine (coordX1, coordY1, coordX2, coordY2) {
         //This line disallows clicking while the win sound is playing
         disableClick();
         // this line plays the win sounds
-        audio('./media/winGame.mp3');
+        audio('./media/winGame2.mp3');
         //This line calls our main animation loop
         animateLineDrawing();
         //This line waits 1 sec. Then, clears canvas, resets game and allows clicking again
